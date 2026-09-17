@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Карточка товара «Ананасовый улун» интернет-магазина Чайный Бум">
+    <title>Ананасовый улун — Чайный Бум</title>
+
+    <link rel="preload" href="/assets/fonts/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<main class="page">
+    <div class="container">
+        <article class="product">
+            <div class="product__media">
+                <div class="product__image-wrapper">
+                    <img
+                            class="product__image"
+                            src="assets/images/product-image.webp"
+                            alt="Рассыпной чай «Ананасовый улун» с кусочками ананаса"
+                            width="970"
+                            height="970"
+                    >
+                </div>
+            </div>
+
+            <div class="product__content">
+                <header class="product__header">
+                    <a class="product__category" href="#">
+                        <svg
+                                class="product__category-icon"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                        >
+                            <path
+                                    d="M20.5 3.5C13.5 3.5 6.5 6.5 5 13.5C4.3 16.8 6.6 20 10 20C17 20 20.5 12.5 20.5 3.5Z"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                            <path
+                                    d="M4 21C6.5 16 10 12.5 16 8.5"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                            />
+                        </svg>
+
+                        <span>Ароматизированный улун</span>
+                    </a>
+
+                    <h1 class="product__title">Ананасовый улун</h1>
+
+                    <div class="product__description">
+                        <p>
+                            Улун с натуральным ароматом ананаса. Нежный фруктовый
+                            вкус, лёгкий цветочный шлейф и приятное послевкусие.
+                        </p>
+                    </div>
+                </header>
+
+                <section
+                        class="product__options"
+                        aria-labelledby="package-title"
+                >
+                    <h2 class="product__section-title" id="package-title">
+                        Выберите фасовку:
+                    </h2>
+
+                    <div class="package-options" role="group" aria-label="Фасовка товара">
+                        <button
+                                class="package-options__button is-active"
+                                type="button"
+                                data-article="01306"
+                                data-price="326,40 ₽"
+                                data-old-price="349,20 ₽"
+                                aria-pressed="true"
+                        >
+                            100 г
+                        </button>
+
+                        <button
+                                class="package-options__button"
+                                type="button"
+                                data-article="01307"
+                                data-price="1 432 ₽"
+                                data-old-price="1 646 ₽"
+                                aria-pressed="false"
+                        >
+                            500 г
+                        </button>
+
+                        <button
+                                class="package-options__button"
+                                type="button"
+                                data-article="01308"
+                                data-price="2 064 ₽"
+                                data-old-price="2 592 ₽"
+                                aria-pressed="false"
+                        >
+                            1000 г
+                        </button>
+
+                        <button
+                                class="package-options__button"
+                                type="button"
+                                data-article="01309"
+                                data-price="6 320 ₽"
+                                data-old-price="8 710 ₽"
+                                aria-pressed="false"
+                        >
+                            5000 г
+                        </button>
+                    </div>
+                </section>
+
+                <div class="product__buy">
+                    <div class="product__price-details" aria-live="polite">
+                        <div class="product__price">
+          <span class="product__current-price" id="product-price">
+            326,40 ₽
+          </span>
+
+                            <del class="product__old-price" id="product-old-price">
+                                349,20 ₽
+                            </del>
+                        </div>
+
+                        <p class="product__article">
+                            Артикул:
+                            <span id="product-article">01306</span>
+                        </p>
+                    </div>
+
+                    <button class="product__cart-button" type="button">
+                        <svg
+                                class="product__cart-icon"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                        >
+                            <path
+                                    d="M5.5 8.5H18.5L17.5 20H6.5L5.5 8.5Z"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linejoin="round"
+                            />
+                            <path
+                                    d="M9 10V7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7V10"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                            />
+                            <path
+                                    d="M9 13V14M15 13V14"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                            />
+                        </svg>
+
+                        <span>В корзину</span>
+                    </button>
+                </div>
+            </div>
+        </article>
+    </div>
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
