@@ -1,6 +1,7 @@
 # Карточка товара Teaboom
 
 Тестовое задание по адаптивной верстке карточки товара интернет-магазина чая.
+Ссылка на GitHub Pages: https://konovnina.github.io/teaboom-product-card/
 
 ## О проекте
 
