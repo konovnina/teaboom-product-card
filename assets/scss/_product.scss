@@ -2,8 +2,13 @@
 
 .product {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 40px;
+  grid-template-columns:
+    minmax(300px, 2fr)
+    minmax(0, 3fr);
+  grid-template-areas:
+    "media header"
+    "media details";
+  gap: 24px;
   align-items: start;
   background-color: v.$color-surface;
   border: 1px solid v.$color-border;
@@ -12,6 +17,7 @@
   box-shadow: v.$shadow-card;
 
   &__media {
+    grid-area: media;
     min-width: 0;
   }
 
@@ -35,7 +41,7 @@
   }
 
   &__header {
-    margin-bottom: 18px;
+    grid-area: header;
   }
 
   &__category {
@@ -74,10 +80,17 @@
   }
 
   &__description p {
-    margin: 0 0 18px 0;
     color: v.$color-text-muted;
     font-size: 16px;
-    line-height: 1.65;
+    line-height: 1.6;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__details {
+    grid-area: details;
+    min-width: 0;
   }
 
   &__options {
@@ -126,17 +139,21 @@
   }
 
   &__cart-button {
+    min-width: 190px;
+    min-height: 48px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     background: v.$color-yellow;
     color: #222;
     padding: 12px 20px;
     border-radius: 8px;
+    font-size: 18px;
+    line-height: 1.25;
     font-weight: 700;
     border: none;
     cursor: pointer;
-    min-height: 48px;
     transition: background-color v.$transition-default, transform v.$transition-default;
 
     .product__cart-icon {
@@ -171,6 +188,7 @@
     cursor: pointer;
     color: v.$color-text;
     text-align: center;
+    white-space: nowrap;
     transition: background-color v.$transition-default, border-color v.$transition-default, color v.$transition-default;
 
     &:hover {
@@ -193,10 +211,15 @@
 }
 
 @media (max-width: v.$tablet) {
-  .product {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
+    .product {
+      grid-template-columns:
+        minmax(300px, 1fr)
+        minmax(0, 2fr);
+      grid-template-areas:
+        "header header"
+        "media details";
+      gap: 24px;
+    }
 
   .product__title {
     font-size: 36px;
@@ -212,10 +235,31 @@
     width: 100%;
     justify-content: center;
   }
+
+  .package-options {
+    grid-template-columns: repeat(4, 1fr);
+
+    &__button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
 }
 
 @media (max-width: v.$mobile) {
+  .product {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "media"
+      "details";
+    padding: 24px;
+    border: none;
+    border-radius: 0;
+  }
+
   .product__title {
+    margin-bottom: 16px;
     font-size: 28px;
   }
 
@@ -228,7 +272,7 @@
   }
 
   .package-options {
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -236,15 +280,5 @@
   .product__image-wrapper:hover .product__image,
   .product__image-wrapper:focus-within .product__image {
     transform: scale(1.07);
-  }
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-  .product__image,
-  .product__image-wrapper {
-    transition: none !important;
-    will-change: auto;
-    transform: none !important;
   }
 }

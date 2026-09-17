@@ -15,6 +15,43 @@
 <main class="page">
     <div class="container">
         <article class="product">
+            <header class="product__header">
+                <a class="product__category" href="#">
+                    <svg
+                            class="product__category-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            aria-hidden="true"
+                    >
+                        <path
+                                d="M20.5 3.5C13.5 3.5 6.5 6.5 5 13.5C4.3 16.8 6.6 20 10 20C17 20 20.5 12.5 20.5 3.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                        />
+                        <path
+                                d="M4 21C6.5 16 10 12.5 16 8.5"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                        />
+                    </svg>
+
+                    <span>Ароматизированный улун</span>
+                </a>
+
+                <h1 class="product__title">Ананасовый улун</h1>
+
+                <div class="product__description">
+                    <p>
+                        Состав: китайский бирюзовый чай, цукаты, натуральные ароматические масла. Светлый Фуцзяньский улун с&nbsp;ароматом ананаса. В&nbsp;сухом виде&nbsp;&mdash; красивый крупный лист изумрудного цвета, скруткой листа напоминающий Те&nbsp;Гуань Инь. В&nbsp;прогретой посуде аромат свежей, весенней зелени и&nbsp;спелого ананаса. Скрученный лист медленно раскрывается, отдавая весь свой аромат. Тем, кому пришёлся по&nbsp;вкусу этот чай, может также понравиться связанный чай &laquo;Ананасовый рай&raquo;.
+                    </p>
+                </div>
+            </header>
+
             <div class="product__media">
                 <div class="product__image-wrapper">
                     <img
@@ -27,61 +64,21 @@
                 </div>
             </div>
 
-            <div class="product__content">
-                <header class="product__header">
-                    <a class="product__category" href="#">
-                        <svg
-                                class="product__category-icon"
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                aria-hidden="true"
-                        >
-                            <path
-                                    d="M20.5 3.5C13.5 3.5 6.5 6.5 5 13.5C4.3 16.8 6.6 20 10 20C17 20 20.5 12.5 20.5 3.5Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                            />
-                            <path
-                                    d="M4 21C6.5 16 10 12.5 16 8.5"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                            />
-                        </svg>
-
-                        <span>Ароматизированный улун</span>
-                    </a>
-
-                    <h1 class="product__title">Ананасовый улун</h1>
-
-                    <div class="product__description">
-                        <p>
-                            Улун с натуральным ароматом ананаса. Нежный фруктовый
-                            вкус, лёгкий цветочный шлейф и приятное послевкусие.
-                        </p>
-                    </div>
-                </header>
-
+            <div class="product__details">
                 <section
                         class="product__options"
-                        aria-labelledby="package-title"
                 >
                     <h2 class="product__section-title" id="package-title">
                         Выберите фасовку:
                     </h2>
 
-                    <div class="package-options" role="group" aria-label="Фасовка товара">
+                    <div class="package-options" role="group">
                         <button
                                 class="package-options__button is-active"
                                 type="button"
                                 data-article="01306"
                                 data-price="326,40 ₽"
                                 data-old-price="349,20 ₽"
-                                aria-pressed="true"
                         >
                             100 г
                         </button>
@@ -92,7 +89,6 @@
                                 data-article="01307"
                                 data-price="1 432 ₽"
                                 data-old-price="1 646 ₽"
-                                aria-pressed="false"
                         >
                             500 г
                         </button>
@@ -103,7 +99,6 @@
                                 data-article="01308"
                                 data-price="2 064 ₽"
                                 data-old-price="2 592 ₽"
-                                aria-pressed="false"
                         >
                             1000 г
                         </button>
@@ -114,7 +109,6 @@
                                 data-article="01309"
                                 data-price="6 320 ₽"
                                 data-old-price="8 710 ₽"
-                                aria-pressed="false"
                         >
                             5000 г
                         </button>
@@ -122,13 +116,19 @@
                 </section>
 
                 <div class="product__buy">
-                    <div class="product__price-details" aria-live="polite">
+                    <div class="product__price-details">
                         <div class="product__price">
-          <span class="product__current-price" id="product-price">
-            326,40 ₽
-          </span>
+                    <span
+                            class="product__current-price"
+                            id="product-price"
+                    >
+                        326,40 ₽
+                    </span>
 
-                            <del class="product__old-price" id="product-old-price">
+                            <del
+                                    class="product__old-price"
+                                    id="product-old-price"
+                            >
                                 349,20 ₽
                             </del>
                         </div>
@@ -142,11 +142,10 @@
                     <button class="product__cart-button" type="button">
                         <svg
                                 class="product__cart-icon"
-                                width="22"
-                                height="22"
+                                width="28"
+                                height="28"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                aria-hidden="true"
                         >
                             <path
                                     d="M5.5 8.5H18.5L17.5 20H6.5L5.5 8.5Z"
@@ -160,14 +159,7 @@
                                     stroke-width="1.8"
                                     stroke-linecap="round"
                             />
-                            <path
-                                    d="M9 13V14M15 13V14"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                            />
                         </svg>
-
                         <span>В корзину</span>
                     </button>
                 </div>

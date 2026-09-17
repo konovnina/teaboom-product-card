@@ -41,11 +41,11 @@ body {
 
 @media (max-width: v.$mobile) {
   .page {
-    padding: 20px 0 32px;
+    padding: 0;
   }
 
   .container {
-    width: min(calc(100% - 32px), #{v.$container-width});
+    width: 100%;
   }
 }
 
